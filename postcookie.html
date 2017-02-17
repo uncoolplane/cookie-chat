@@ -1,0 +1,20 @@
+$scope.postCookie = function() {
+    messageService.postCookie($scope.cookie)
+  }
+
+[4:59]
+this.postCookie = function(message) {
+return $http({
+  method: 'POST',
+  url: 'https://practiceapi.devmounta.in/api/cookies',
+  data: {
+    cookie: message
+  }
+})
+}
+
+[4:59]
+<form ng-submit="postCookie(cookie)">
+  <input class="form-control text-box" type="text" ng-model="cookie" placeholder="Add your favorite cookie">
+
+</form>
